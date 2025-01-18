@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .topic-btn {
+    @apply h-32 m-2 rounded-xl text-white font-bold text-xl transition-transform hover:scale-105 active:scale-95;
+  }
+  
+  .game-btn {
+    @apply h-20 m-2 rounded-xl bg-indigo-500 text-white font-bold text-lg transition-transform hover:scale-105 active:scale-95;
+  }
+}
