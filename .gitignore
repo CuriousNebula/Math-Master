@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
 dist
 dist-ssr
@@ -22,3 +23,30 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build files
+/build
+/dist
+/.next
+/out
+
+# Cache
+.cache
+.parcel-cache
+.npm
+.eslintcache
+.stylelintcache
+
+# Test coverage
+/coverage
+
+# Misc
+.DS_Store
+Thumbs.db

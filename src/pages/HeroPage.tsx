@@ -1,20 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import animatedLogo from '../logo/logo_1.gif';
 
 interface Topic {
   name: string;
   displayName: string;
   color: string;
+  symbol: string;
 }
 
 const topics: Topic[] = [
-  { name: 'ARITHMETIC', displayName: 'Arithmetic', color: 'bg-purple-500' },
-  { name: 'ALGEBRA', displayName: 'Algebra', color: 'bg-pink-500' },
-  { name: 'GEOMETRY', displayName: 'Geometry', color: 'bg-emerald-500' },
-  { name: 'PROBABILITY', displayName: 'Probability', color: 'bg-amber-500' },
-  { name: 'STATISTICS', displayName: 'Statistics', color: 'bg-blue-500' }
+  { name: 'ARITHMETIC', displayName: 'Arithmetic', color: 'bg-purple-500', symbol: '🔢' },
+  { name: 'ALGEBRA', displayName: 'Algebra', color: 'bg-pink-500', symbol: '📐' },
+  { name: 'GEOMETRY', displayName: 'Geometry', color: 'bg-emerald-500', symbol: '📏' },
+  { name: 'PROBABILITY', displayName: 'Probability', color: 'bg-amber-500', symbol: '🎲' },
+  { name: 'STATISTICS', displayName: 'Statistics', color: 'bg-blue-500', symbol: '📊' }
 ];
+
+const LogoComponent = () => {
+  const [showStatic, setShowStatic] = useState(false);
+  const hasRun = useRef(false);
+
+  useEffect(() => {
+    if (!hasRun.current) {
+      hasRun.current = true;
+      const timer = setTimeout(() => {
+        setShowStatic(true);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  return (
+    <img 
+      src={showStatic ? animatedLogo + '#0' : animatedLogo}
+      alt="MathMaster Logo" 
+      className="w-32 h-32 object-cover"
+    />
+  );
+};
 
 export default function HeroPage() {
   const navigate = useNavigate();
@@ -24,7 +50,7 @@ export default function HeroPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
+    <div className="min-h-screen bg-gray-100 p-4 overflow-hidden">
       <div className="max-w-2xl mx-auto">
         <motion.div 
           initial={{ y: -20, opacity: 0 }}
@@ -32,11 +58,7 @@ export default function HeroPage() {
           className="text-center mb-8"
         >
           <div className="w-32 h-32 bg-white rounded-full shadow-lg mx-auto mb-4 flex items-center justify-center">
-            <img 
-              src="/mathmaster-logo.svg" 
-              alt="MathMaster Logo" 
-              className="w-24 h-24"
-            />
+            <LogoComponent />
           </div>
           <h1 className="text-4xl font-bold text-gray-800 mb-2">MathMaster</h1>
           <p className="text-gray-600">Master mathematics through interactive quizzes</p>
@@ -54,7 +76,10 @@ export default function HeroPage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {topic.displayName}
+              <div className="flex items-center justify-center space-x-2">
+                <span className="text-2xl">{topic.symbol}</span>
+                <span>{topic.displayName}</span>
+              </div>
             </motion.button>
           ))}
         </div>
@@ -69,7 +94,10 @@ export default function HeroPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Daily Challenge
+            <div className="flex items-center justify-center space-x-2">
+              <span className="text-xl">🎯</span>
+              <span>Daily Challenge</span>
+            </div>
           </motion.button>
 
           <motion.button
@@ -81,7 +109,10 @@ export default function HeroPage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Game Mode
+            <div className="flex items-center justify-center space-x-2">
+              <span className="text-xl">🎮</span>
+              <span>Game Mode</span>
+            </div>
           </motion.button>
         </div>
       </div>

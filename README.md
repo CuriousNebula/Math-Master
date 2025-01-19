@@ -1,76 +1,85 @@
-# MathMaster Quiz App
+# Math Master Quiz
 
-An interactive mathematics quiz application built with React and TypeScript.
+A modern, interactive mathematics quiz application built with React and TypeScript. Test your knowledge across various mathematical topics with different game modes and difficulty levels.
 
 ## Features
 
-- Multiple Quiz Topics:
-  - Arithmetic
+- Multiple Mathematical Topics:
   - Algebra
+  - Arithmetic
   - Geometry
   - Probability
   - Statistics
 
 - Game Modes:
-  - Regular Quiz Mode
-  - Daily Challenge
-  - Sudden Death Mode
-  - Time Attack Mode
+  - Classic Mode: Standard 5-question quiz
+  - Time Attack: Race against time with bonus seconds for correct answers
+  - Sudden Death: Three lives, how far can you go?
 
 - Difficulty Levels:
-  - Level 1 (Basic)
-  - Level 2 (Intermediate)
-  - Level 3 (Advanced)
+  - Level 1: Basic concepts
+  - Level 2: Intermediate problems
+  - Level 3: Advanced challenges
 
-## Technologies Used
+- Interactive Features:
+  - Real-time feedback
+  - Score tracking
+  - Streak counter
+  - Beautiful animations
+  - Responsive design
 
-- React
+## Tech Stack
+
+- React 18
 - TypeScript
 - Tailwind CSS
 - Framer Motion
-- React Router
+- Vite
 
 ## Getting Started
 
 1. Clone the repository:
-```bash
-git clone https://github.com/CuriousNebula/Math-Master.git
-```
+   ```bash
+   git clone https://github.com/yourusername/math-master.git
+   cd math-master
+   ```
 
 2. Install dependencies:
-```bash
-npm install
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## Project Structure
+
+```
+math-master/
+├── src/
+│   ├── data/         # Question datasets
+│   ├── pages/        # React components for each page
+│   ├── types/        # TypeScript type definitions
+│   └── App.tsx       # Main application component
+├── public/           # Static assets
+└── package.json      # Project dependencies and scripts
 ```
 
-3. Run the development server:
-```bash
-npm run dev
-```
+## Contributing
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-## Game Modes
-
-### Regular Quiz
-- Select a topic and difficulty level
-- Answer questions to test your knowledge
-- Get instant feedback on your answers
-
-### Daily Challenge
-- New set of questions every day
-- Mixed topics and difficulty levels
-- Track your daily progress
-
-### Sudden Death Mode
-- Answer questions until you make a mistake
-- Questions from all difficulty levels
-- Compete for the highest streak
-
-### Time Attack Mode
-- Answer as many questions as possible in 60 seconds
-- Points based on difficulty level
-- Streak bonuses for consecutive correct answers
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
-MIT
+MATHMASTER IN
