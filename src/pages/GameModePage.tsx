@@ -4,12 +4,15 @@ import { motion } from 'framer-motion';
 import dataset from '../data/dataset.json';
 import Confetti from 'react-confetti';
 
+type Level = 'Level 1' | 'Level 2' | 'Level 3';
+type Topic = 'ARITHMETIC' | 'ALGEBRA' | 'GEOMETRY' | 'STATISTICS' | 'PROBABILITY';
+
 interface Question {
   text: string;
   answer: string;
   options: string[];
-  topic: string;
-  level: string;
+  topic: Topic;
+  level: Level;
 }
 
 type GameMode = 'select' | 'suddenDeath' | 'timeAttack';
@@ -23,10 +26,10 @@ const topics = [
 ];
 
 // Points based on difficulty level
-const DIFFICULTY_POINTS = {
+const DIFFICULTY_POINTS: { [key in Level]: number } = {
   'Level 1': 10,
   'Level 2': 20,
-  'Level 3': 30
+  'Level 3': 30,
 };
 
 const generateRandomOptions = (correctAnswer: string): string[] => {
@@ -57,8 +60,8 @@ const generateRandomOptions = (correctAnswer: string): string[] => {
   return options.sort(() => Math.random() - 0.5);
 };
 
-const getRandomQuestion = (topic: string): Question | null => {
-  const levels = ['Level 1', 'Level 2', 'Level 3'];
+const getRandomQuestion = (topic: Topic): Question | null => {
+  const levels: Level[] = ['Level 1', 'Level 2', 'Level 3'];
   const randomLevel = levels[Math.floor(Math.random() * levels.length)];
   
   if (!dataset[topic] || !dataset[topic][randomLevel]) {
@@ -79,15 +82,15 @@ const getRandomQuestion = (topic: string): Question | null => {
     text: randomQuestion[qKey],
     answer: randomQuestion[aKey],
     options: generateRandomOptions(randomQuestion[aKey]),
-    topic: topic,
-    level: randomLevel
+    topic,
+    level: randomLevel,
   };
 };
 
 export default function GameModePage() {
   const navigate = useNavigate();
   const [mode, setMode] = useState<GameMode>('select');
-  const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
+  const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState<Question | null>(null);
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(60);
@@ -141,7 +144,7 @@ export default function GameModePage() {
     }
   };
 
-  const handleTopicSelect = (topic: string) => {
+  const handleTopicSelect = (topic: Topic) => {
     setSelectedTopic(topic);
     setCurrentQuestion(getRandomQuestion(topic));
     setScore(0);
@@ -264,7 +267,7 @@ export default function GameModePage() {
                 {topics.map((topic) => (
                   <motion.button
                     key={topic.name}
-                    onClick={() => handleTopicSelect(topic.name)}
+                    onClick={() => handleTopicSelect(topic.name as Topic)}
                     className={`p-6 text-lg font-semibold text-white rounded-lg transition-all ${topic.color} hover:opacity-90`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

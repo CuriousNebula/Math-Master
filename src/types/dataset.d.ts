@@ -1,27 +1,18 @@
-interface QuestionItem {
-  [key: string]: string;
+type Level = 'Level 1' | 'Level 2' | 'Level 3';
+type Topic = 'ARITHMETIC' | 'ALGEBRA' | 'GEOMETRY' | 'STATISTICS' | 'PROBABILITY';
+
+interface QuestionData {
+  [key: `Q${number}`]: string;
+  [key: `A${number}`]: string;
 }
 
-interface LevelQuestions {
-  [key: string]: QuestionItem;
-}
-
-interface TopicLevels {
-  "Level 1": LevelQuestions[];
-  "Level 2": LevelQuestions[];
-  "Level 3": LevelQuestions[];
+interface TopicData {
+  [key in Level]: QuestionData[];
 }
 
 interface Dataset {
-  ARITHMETIC: TopicLevels;
-  ALGEBRA: TopicLevels;
-  PROBABILITY: TopicLevels;
-  STATISTICS: TopicLevels;
-  GEOMETRY: TopicLevels;
-  [key: string]: TopicLevels;
+  [key in Topic]: TopicData;
 }
 
-declare module '*.json' {
-  const dataset: Dataset;
-  export default dataset;
-}
+declare const dataset: Dataset;
+export default dataset;
