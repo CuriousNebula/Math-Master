@@ -17,6 +17,10 @@ interface Question {
 
 type GameMode = 'select' | 'suddenDeath' | 'timeAttack';
 
+interface QuestionData {
+  [key: string]: string;
+}
+
 const topics = [
   { name: 'ARITHMETIC', displayName: 'Arithmetic', color: 'bg-purple-500' },
   { name: 'ALGEBRA', displayName: 'Algebra', color: 'bg-pink-500' },
@@ -69,19 +73,28 @@ const getRandomQuestion = (topic: Topic): Question | null => {
   }
 
   const questions = dataset[topic][randomLevel];
-  const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+  // First cast to unknown, then to QuestionData to safely handle the type conversion
+  const randomQuestion = (questions[Math.floor(Math.random() * questions.length)] as unknown) as QuestionData;
   
   if (!randomQuestion) return null;
 
-  const qKey = Object.keys(randomQuestion).find(k => k.startsWith('Q'));
-  const aKey = Object.keys(randomQuestion).find(k => k.startsWith('A'));
+  const questionKeys = Object.keys(randomQuestion).filter(k => k.startsWith('Q'));
+  const answerKeys = Object.keys(randomQuestion).filter(k => k.startsWith('A'));
   
-  if (!qKey || !aKey) return null;
+  if (questionKeys.length === 0 || answerKeys.length === 0) return null;
+  
+  const qKey = questionKeys[0];
+  const aKey = answerKeys[0];
+  
+  const questionText = randomQuestion[qKey];
+  const answerText = randomQuestion[aKey];
+  
+  if (!questionText || !answerText) return null;
 
   return {
-    text: randomQuestion[qKey],
-    answer: randomQuestion[aKey],
-    options: generateRandomOptions(randomQuestion[aKey]),
+    text: questionText,
+    answer: answerText,
+    options: generateRandomOptions(answerText),
     topic,
     level: randomLevel,
   };
