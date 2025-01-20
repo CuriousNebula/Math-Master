@@ -1,6 +1,6 @@
  {
     "ARITHMETIC": {
-      "Level 1": [
+      "Level 1":[
         {"Q1": "What is 25 + 18?", "A1": "43"},
         {"Q2": "What is 72 - 45?", "A2": "27"},
         {"Q3": "What is 6 × 8?", "A3": "48"},
@@ -31,7 +31,8 @@
         {"Q28": "What is 13 × 6?", "A28": "78"},
         {"Q29": "What is 144 ÷ 12?", "A29": "12"},
         {"Q30": "What is 67 + 33?", "A30": "100"}
-      ],
+    ],
+    
       "Level 2": [
         {"Q31": "What is 156 + 289?", "A31": "445"},
         {"Q32": "What is 523 - 167?", "A32": "356"},
@@ -73,7 +74,8 @@
         {"Q68": "What is 987 - 654?", "A68": "333"},
         {"Q69": "What is 90 × 10?", "A69": "900"},
         {"Q70": "What is 1800 ÷ 15?", "A70": "120"}
-      ],
+    ],
+    
       "Level 3": [
         {"Q71": "What is (567 × 23) + (567 × 77)?", "A71": "56700"},
         {"Q72": "What is 3456 ÷ 16 + 789?", "A72": "1005"},
@@ -81,7 +83,7 @@
         {"Q74": "What is 8976 - 3456 + 789?", "A74": "6309"},
         {"Q75": "What is (678 × 345) ÷ 15?", "A75": "15597"},
         {"Q76": "What is (456 × 34) + (456 × 66)?", "A76": "45600"},
-        {"Q77": "What is 5678 ÷ 17 + 234?", "A77": "567.53"},
+        {"Q77": "What is 5678 ÷ 17 + 234?", "A77": "568.06"},
         {"Q78": "What is (456 + 789) × (78 - 34)?", "A78": "54780"},
         {"Q79": "What is 9876 - 4567 + 890?", "A79": "6199"},
         {"Q80": "What is (789 × 456) ÷ 18?", "A80": "19992"},
@@ -89,7 +91,7 @@
         {"Q82": "What is 6789 ÷ 19 + 345?", "A82": "702.58"},
         {"Q83": "What is (234 + 567) × (67 - 34)?", "A83": "26433"},
         {"Q84": "What is 8765 - 4321 + 678?", "A84": "5122"},
-        {"Q85": "What is (890 × 123) ÷ 15?", "A85": "7298"},
+        {"Q85": "What is (890 × 123) ÷ 15?", "A85": "7294"},
         {"Q86": "What is (345 × 67) + (345 × 33)?", "A86": "34500"},
         {"Q87": "What is 7890 ÷ 15 + 456?", "A87": "982"},
         {"Q88": "What is (567 + 890) × (78 - 45)?", "A88": "48081"},
@@ -105,10 +107,11 @@
         {"Q98": "What is (678 + 901) × (67 - 34)?", "A98": "52137"},
         {"Q99": "What is 9876 - 5432 + 678?", "A99": "5122"},
         {"Q100": "What is (890 × 123) ÷ 20?", "A100": "5463.5"}
-      ]
+    ]
+    
     },
     "ALGEBRA": {
-      "Level 1": [
+      "Level 1":[
         {"Q1": "Solve for x: x + 5 = 12", "A1": "x = 7"},
         {"Q2": "Solve for y: 3y = 15", "A2": "y = 5"},
         {"Q3": "Solve for x: x - 8 = 4", "A3": "x = 12"},
@@ -139,7 +142,7 @@
         {"Q28": "Solve for y: y - 20 = 30", "A28": "y = 50"},
         {"Q29": "Solve for x: 15x + 10 = 85", "A29": "x = 5"},
         {"Q30": "Solve for y: 16y = 256", "A30": "y = 16"}
-      ],
+    ],
       "Level 2": [
         {"Q31": "Solve for x: 3x + 7 = 22", "A31": "x = 5"},
         {"Q32": "Solve for y: 5y - 3 = 27", "A32": "y = 6"},
@@ -171,52 +174,174 @@
         {"Q58": "Solve for y: 13(y - 8) = 91", "A58": "y = 15"},
         {"Q59": "Solve for x: 17x + 20 = 190", "A59": "x = 10"},
         {"Q60": "Solve for y: 18y - 17 = 199", "A60": "y = 12"}
-      ],
+    ]
+    ,
       "Level 3": [
-        {"Q61": "Solve the system: 2x + y = 7, x - y = 1", "A61": "x = 3, y = 1"},
-        {"Q62": "Solve: x² + 5x + 6 = 0", "A62": "x = -2, -3"},
-        {"Q63": "Solve: 3x² - 12 = 0", "A63": "x = ±2"},
-        {"Q64": "Factor: x² - 9", "A64": "(x+3)(x-3)"},
-        {"Q65": "Solve: 2x² + 7x + 3 = 0", "A65": "x = -3, -0.5"},
-        {"Q66": "Solve the system: 3x + 2y = 8, x - y = 1", "A66": "x = 2, y = 1"},
-        {"Q67": "Solve: x² + 6x + 8 = 0", "A67": "x = -2, -4"},
-        {"Q68": "Solve: 4x² - 16 = 0", "A68": "x = ±2"},
-        {"Q69": "Factor: x² - 16", "A69": "(x+4)(x-4)"},
-        {"Q70": "Solve: 3x² + 10x + 3 = 0", "A70": "x = -3, -0.33"},
-        {"Q71": "Solve the system: 4x + 3y = 10, 2x - y = 1", "A71": "x = 1, y = 2"},
-        {"Q72": "Solve: x² + 7x + 12 = 0", "A72": "x = -3, -4"},
-        {"Q73": "Solve: 5x² - 20 = 0", "A73": "x = ±2"},
-        {"Q74": "Factor: x² - 25", "A74": "(x+5)(x-5)"},
-        {"Q75": "Solve: 4x² + 12x + 9 = 0", "A75": "x = -1.5"},
-        {"Q76": "Solve the system: 5x + 4y = 13, 3x - 2y = 5", "A76": "x = 3, y = 2"},
-        {"Q77": "Solve: x² + 8x + 15 = 0", "A77": "x = -3, -5"},
-        {"Q78": "Solve: 6x² - 24 = 0", "A78": "x = ±2"},
-        {"Q79": "Factor: x² - 36", "A79": "(x+6)(x-6)"},
-        {"Q80": "Solve: 5x² + 15x + 10 = 0", "A80": "x = -1, -2"},
-        {"Q81": "Solve the system: 6x + 5y = 16, 4x - 3y = 7", "A81": "x = 3, y = 2"},
-        {"Q82": "Solve: x² + 9x + 18 = 0", "A82": "x = -3, -6"},
-        {"Q83": "Solve: 7x² - 28 = 0", "A83": "x = ±2"},
-        {"Q84": "Factor: x² - 49", "A84": "(x+7)(x-7)"},
-        {"Q85": "Solve: 6x² + 18x + 12 = 0", "A85": "x = -1, -2"},
-        {"Q86": "Solve the system: 7x + 6y = 19, 5x - 4y = 9", "A86": "x = 3, y = 2"},
-        {"Q87": "Solve: x² + 10x + 21 = 0", "A87": "x = -3, -7"},
-        {"Q88": "Solve: 8x² - 32 = 0", "A88": "x = ±2"},
-        {"Q89": "Factor: x² - 64", "A89": "(x+8)(x-8)"},
-        {"Q90": "Solve: 7x² + 21x + 14 = 0", "A90": "x = -1, -2"},
-        {"Q91": "Solve the system: 8x + 7y = 22, 6x - 5y = 11", "A91": "x = 3, y = 2"},
-        {"Q92": "Solve: x² + 11x + 24 = 0", "A92": "x = -3, -8"},
-        {"Q93": "Solve: 9x² - 36 = 0", "A93": "x = ±2"},
-        {"Q94": "Factor: x² - 81", "A94": "(x+9)(x-9)"},
-        {"Q95": "Solve: 8x² + 24x + 16 = 0", "A95": "x = -1, -2"},
-        {"Q96": "Solve the system: 9x + 8y = 25, 7x - 6y = 13", "A96": "x = 3, y = 2"},
-        {"Q97": "Solve: x² + 12x + 27 = 0", "A97": "x = -3, -9"},
-        {"Q98": "Solve: 10x² - 40 = 0", "A98": "x = ±2"},
-        {"Q99": "Factor: x² - 100", "A99": "(x+10)(x-10)"},
-        {"Q100": "Solve: 9x² + 27x + 18 = 0", "A100": "x = -1, -2"}
+        {
+          "Q61": "Solve the system: 2x + y = 7, x - y = 1",
+          "A61": "x = 8/3, y = 5/3"
+      },
+      {
+          "Q62": "Solve: x² + 5x + 6 = 0",
+          "A62": "x = -2, -3"
+      },
+      {
+          "Q63": "Solve: 3x² - 12 = 0",
+          "A63": "x = ±2"
+      },
+      {
+          "Q64": "Factor: x² - 9",
+          "A64": "(x+3)(x-3)"
+      },
+      {
+          "Q65": "Solve: 2x² + 7x + 3 = 0",
+          "A65": "x = -3, -0.5"
+      },
+      {
+          "Q66": "Solve the system: 3x + 2y = 8, x - y = 1",
+          "A66": "x = 2, y = 1"
+      },
+      {
+          "Q67": "Solve: x² + 6x + 8 = 0",
+          "A67": "x = -2, -4"
+      },
+      {
+          "Q68": "Solve: 4x² - 16 = 0",
+          "A68": "x = ±2"
+      },
+      {
+          "Q69": "Factor: x² - 16",
+          "A69": "(x+4)(x-4)"
+      },
+      {
+          "Q70": "Solve: 3x² + 10x + 3 = 0",
+          "A70": "x = -3, -0.33"
+      },
+      {
+          "Q71": "Solve the system: 4x + 3y = 10, 2x - y = 1",
+          "A71": "x = 1, y = 2"
+      },
+      {
+          "Q72": "Solve: x² + 7x + 12 = 0",
+          "A72": "x = -3, -4"
+      },
+      {
+          "Q73": "Solve: 5x² - 20 = 0",
+          "A73": "x = ±2"
+      },
+      {
+          "Q74": "Factor: x² - 25",
+          "A74": "(x+5)(x-5)"
+      },
+      {
+          "Q75": "Solve: 4x² + 12x + 9 = 0",
+          "A75": "x = -1.5"
+      },
+      {
+          "Q76": "Solve the system: 5x + 4y = 13, 3x - 2y = 5",
+          "A76": "x = 3, y = 2"
+      },
+      {
+          "Q77": "Solve: x² + 8x + 15 = 0",
+          "A77": "x = -3, -5"
+      },
+      {
+          "Q78": "Solve: 6x² - 24 = 0",
+          "A78": "x = ±2"
+      },
+      {
+          "Q79": "Factor: x² - 36",
+          "A79": "(x+6)(x-6)"
+      },
+      {
+          "Q80": "Solve: 5x² + 15x + 10 = 0",
+          "A80": "x = -1, -2"
+      },
+      {
+          "Q81": "Solve the system: 6x + 5y = 16, 4x - 3y = 7",
+          "A81": "x = 3, y = 2"
+      },
+      {
+          "Q82": "Solve: x² + 9x + 18 = 0",
+          "A82": "x = -3, -6"
+      },
+      {
+          "Q83": "Solve: 7x² - 28 = 0",
+          "A83": "x = ±2"
+      },
+      {
+          "Q84": "Factor: x² - 49",
+          "A84": "(x+7)(x-7)"
+      },
+      {
+          "Q85": "Solve: 6x² + 18x + 12 = 0",
+          "A85": "x = -1, -2"
+      },
+      {
+          "Q86": "Solve the system: 7x + 6y = 19, 5x - 4y = 9",
+          "A86": "x = 3, y = 2"
+      },
+      {
+          "Q87": "Solve: x² + 10x + 21 = 0",
+          "A87": "x = -3, -7"
+      },
+      {
+          "Q88": "Solve: 8x² - 32 = 0",
+          "A88": "x = ±2"
+      },
+      {
+          "Q89": "Factor: x² - 64",
+          "A89": "(x+8)(x-8)"
+      },
+      {
+          "Q90": "Solve: 7x² + 21x + 14 = 0",
+          "A90": "x = -1, -2"
+      },
+      {
+          "Q91": "Solve the system: 8x + 7y = 22, 6x - 5y = 11",
+          "A91": "x = 3, y = 2"
+      },
+      {
+          "Q92": "Solve: x² + 11x + 24 = 0",
+          "A92": "x = -3, -8"
+      },
+      {
+          "Q93": "Solve: 9x² - 36 = 0",
+          "A93": "x = ±2"
+      },
+      {
+          "Q94": "Factor: x² - 81",
+          "A94": "(x+9)(x-9)"
+      },
+      {
+          "Q95": "Solve: 8x² + 24x + 16 = 0",
+          "A95": "x = -1, -2"
+      },
+      {
+          "Q96": "Solve the system: 9x + 8y = 25, 7x - 6y = 13",
+          "A96": "x = 3, y = 2"
+      },
+      {
+          "Q97": "Solve: x² + 12x + 27 = 0",
+          "A97": "x = -3, -9"
+      },
+      {
+          "Q98": "Solve: 10x² - 40 = 0",
+          "A98": "x = ±2"
+      },
+      {
+          "Q99": "Factor: x² - 100",
+          "A99": "(x+10)(x-10)"
+      },
+      {
+          "Q100": "Solve: 9x² + 27x + 18 = 0",
+          "A100": "x = -1, -2"
+      }
+      
       ]
     },
     "PROBABILITY": {
-      "Level 1": [
+      "Level 1":[
         {"Q1": "What is the probability of getting heads when flipping a fair coin?", "A1": "1/2 or 0.5"},
         {"Q2": "What is the probability of rolling a 6 on a fair six-sided die?", "A2": "1/6"},
         {"Q3": "If you draw a card from a standard deck, what is the probability of getting a heart?", "A3": "13/52 or 1/4"},
@@ -247,7 +372,8 @@
         {"Q28": "If you draw a card from a standard deck, what is the probability of getting a 10?", "A28": "4/52 or 1/13"},
         {"Q29": "What is the probability of rolling a number greater than 2 on a fair six-sided die?", "A29": "4/6 or 2/3"},
         {"Q30": "In a bag of 30 marbles (10 red, 10 blue, 10 green), what is the probability of drawing a red marble?", "A30": "10/30 or 1/3"}
-      ],
+    ]
+    ,
       "Level 2": [
         {"Q31": "What is the probability of rolling two sixes in a row with a fair die?", "A31": "1/36"},
         {"Q32": "If you draw two cards from a deck, what is the probability of getting two aces?", "A32": "6/1326 or 1/221"},
@@ -279,8 +405,9 @@
         {"Q58": "What is the probability of getting at least one tail in eight coin flips?", "A58": "255/256"},
         {"Q59": "In a bag with 12 red, 13 blue, and 14 green marbles, what is the probability of drawing a red marble?", "A59": "12/39 or 4/13"},
         {"Q60": "What is the probability of rolling a sum of 10 with two dice?", "A60": "3/36 or 1/12"}
-      ],
-      "Level 3": [
+    ]
+    ,
+      "Level 3":[
         {"Q61": "In a standard deck, what is the probability of drawing three cards in sequence and getting three of a kind?", "A61": "54/22100"},
         {"Q62": "What is the probability of getting exactly 2 heads in 5 coin flips?", "A62": "10/32 or 0.3125"},
         {"Q63": "If you roll three dice, what is the probability of getting a sum of 18?", "A63": "1/216"},
@@ -321,7 +448,8 @@
         {"Q98": "What is the probability of getting exactly 11 heads in 22 coin flips?", "A98": "646646/4194304 or 0.1542"},
         {"Q99": "If you roll twelve dice, what is the probability of getting a sum of 72?", "A99": "1/2176782336"},
         {"Q100": "What is the probability of drawing twelve kings in a row from a deck of cards?", "A100": "0 (There are only 4 kings in a deck)"}
-      ]
+    ]
+    
     },
     "STATISTICS": {
       "Level 1": [
@@ -355,8 +483,9 @@
         {"Q28": "What is the range of: 18, 27, 36, 45, 54?", "A28": "36"},
         {"Q29": "Calculate the mean of: 35, 45, 55, 65, 75", "A29": "55"},
         {"Q30": "What is the median of: 8, 16, 24, 32, 40, 48, 56, 64?", "A30": "36"}
-      ],
-      "Level 2": [
+    ]
+    ,
+      "Level 2":[
         {"Q31": "Calculate the standard deviation of: 2, 4, 4, 4, 5, 5, 7, 9", "A31": "2.12"},
         {"Q32": "Find the first quartile (Q1) of: 2, 4, 6, 8, 10, 12, 14, 16", "A32": "5"},
         {"Q33": "Calculate the variance of: 1, 2, 3, 4, 5", "A33": "2.5"},
@@ -387,8 +516,9 @@
         {"Q58": "Calculate the variance of: 6, 12, 18, 24, 30", "A58": "72"},
         {"Q59": "Find the interquartile range of: 8, 16, 24, 32, 40, 48, 56, 64", "A59": "24"},
         {"Q60": "Calculate the z-score for 110 in a dataset with mean 100 and standard deviation 10", "A60": "1"}
-      ],
-      "Level 3": [
+    ]
+    ,
+      "Level 3":[
         {"Q61": "Calculate the correlation coefficient for the points: (1,2), (2,4), (3,6), (4,8)", "A61": "1"},
         {"Q62": "Find the regression line equation for: (1,2), (2,5), (3,6), (4,8)", "A62": "y = 2x + 0.5"},
         {"Q63": "Calculate the chi-square statistic for observed values [10,20,30] and expected values [12,18,28]", "A63": "1.131"},
@@ -429,10 +559,11 @@
         {"Q98": "Calculate the chi-square statistic for observed values [45,55,65] and expected values [12,18,28]", "A98": "1.131"},
         {"Q99": "Find the 95% confidence interval for a sample mean of 120, standard deviation 45, and sample size 100", "A99": "(111.18, 128.82)"},
         {"Q100": "Calculate the p-value for a z-score of 6", "A100": "0.00000001"}
-      ]
+    ]
+    
     },
     "GEOMETRY": {
-      "Level 1": [
+      "Level 1":[
         {"Q1": "What is the area of a rectangle with length 8 and width 5?", "A1": "40 square units"},
         {"Q2": "What is the perimeter of a square with side length 6?", "A2": "24 units"},
         {"Q3": "What is the area of a triangle with base 10 and height 4?", "A3": "20 square units"},
@@ -463,7 +594,8 @@
         {"Q28": "What is the circumference of a circle with radius 17? (Use π = 3.14)", "A28": "106.76 units"},
         {"Q29": "What is the area of a square with side length 21?", "A29": "441 square units"},
         {"Q30": "What is the perimeter of a rectangle with length 26 and width 21?", "A30": "94 units"}
-      ],
+    ]
+    ,
       "Level 2": [
         {"Q31": "Find the volume of a cube with edge length 5.", "A31": "125 cubic units"},
         {"Q32": "Find the surface area of a rectangular prism with length 6, width 4, and height 3.", "A32": "108 square units"},
@@ -495,8 +627,9 @@
         {"Q58": "What is the area of a trapezoid with bases 18 and 22, and height 10?", "A58": "200 square units"},
         {"Q59": "Find the volume of a cylinder with radius 8 and height 18. (Use π = 3.14)", "A59": "3617.28 cubic units"},
         {"Q60": "What is the area of a regular hexagon with side length 9?", "A60": "210.44 square units"}
-      ],
-      "Level 3": [
+    ]
+    ,
+      "Level 3":[
         {"Q61": "Find the volume of a cone with radius 6 and height 9. (Use π = 3.14)", "A61": "339.12 cubic units"},
         {"Q62": "Calculate the surface area of a sphere with radius 5. (Use π = 3.14)", "A62": "314 square units"},
         {"Q63": "Find the area of a regular octagon with side length 5.", "A63": "120.71 square units"},
@@ -537,6 +670,7 @@
         {"Q98": "Find the area of a regular octagon with side length 12.", "A98": "694.29 square units"},
         {"Q99": "What is the volume of a pyramid with base area 169 and height 33?", "A99": "1859 cubic units"},
         {"Q100": "Calculate the surface area of a cylinder with radius 11 and height 24. (Use π = 3.14)", "A100": "2411.52 square units"}
-      ]
+    ]
+    
     }
   }
