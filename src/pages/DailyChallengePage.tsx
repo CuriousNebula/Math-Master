@@ -12,6 +12,15 @@ interface Question {
   level: string;
 }
 
+interface QuestionData {
+  [key: string]: string;
+}
+
+type Topic = keyof typeof dataset;
+type Level = keyof typeof dataset[Topic];
+type QuestionKey = `Q${number}`;
+type AnswerKey = `A${number}`;
+
 const generateRandomOptions = (correctAnswer: string, topic: string): string[] => {
   const isNumber = !isNaN(Number(correctAnswer.split(' ')[0]));
   let options: string[] = [correctAnswer];
@@ -42,23 +51,26 @@ const generateRandomOptions = (correctAnswer: string, topic: string): string[] =
 const getRandomQuestionsFromAllTopics = (count: number): Question[] => {
   try {
     const allQuestions: Question[] = [];
-    const topics = Object.keys(dataset);
+    const topics = Object.keys(dataset) as Topic[];
     const maxQuestionsPerTopic = Math.ceil(count * 2 / topics.length);
 
-    topics.forEach(topic => {
+    topics.forEach((topic: Topic) => {
       const topicData = dataset[topic];
       let topicQuestions: Question[] = [];
 
       Object.keys(topicData).forEach(level => {
-        const questions = topicData[level];
-        questions.forEach(q => {
-          const qKey = Object.keys(q).find(k => k.startsWith('Q'));
-          const aKey = Object.keys(q).find(k => k.startsWith('A'));
+        const questions = topicData[level as Level];
+        questions.forEach(questionData => {
+          // Find the first question and answer keys
+          const qKeys = Object.keys(questionData).filter(k => k.startsWith('Q')) as Array<keyof typeof questionData>;
+          const aKeys = Object.keys(questionData).filter(k => k.startsWith('A')) as Array<keyof typeof questionData>;
           
-          if (qKey && aKey && topicQuestions.length < maxQuestionsPerTopic) {
-            const answer = q[aKey];
+          if (qKeys.length > 0 && aKeys.length > 0 && topicQuestions.length < maxQuestionsPerTopic) {
+            const qKey = qKeys[0];
+            const aKey = aKeys[0];
+            const answer = questionData[aKey];
             topicQuestions.push({
-              text: q[qKey],
+              text: questionData[qKey],
               answer: answer,
               options: generateRandomOptions(answer, topic),
               topic: topic,
@@ -186,7 +198,7 @@ export default function DailyChallengePage() {
                   <button
                     key={count}
                     onClick={() => handleQuestionCountSelect(count)}
-                    className="p-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                    className="p-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
                   >
                     {count} Questions
                   </button>
